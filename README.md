@@ -15,6 +15,8 @@ The script can be downloaded from the repo and opened in your IDE of choice, so 
 installed on your machine. The scripts should import the relevent testing packages it needs before run time
 and so there is no need for an installation process.
 
+See requirements.txt also for packages needed for code to work.
+
 # Example Use Case and How To Execute
 Graphs should be entered in the format of a list. Each element should be a list of the vertices, indexed from 0
 with the distance of one point to the next, if there is no path in the graph, the value should be "NO_PATH".
