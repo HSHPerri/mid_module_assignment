@@ -4,6 +4,13 @@ import timeit
 
 class WarshallUnitTests(unittest.TestCase):
 
+    # Writing out weighted graphs can become confusing.
+    # This tests for differing lengths of lists in array to catch mistakes in input.
+    def test_input(self):
+        control_var = len(input_graph[0])
+        for i in input_graph:
+            self.assertEqual(len(i), control_var)
+
     # Test whether a sample input creates the expected output.
     def test_output(self):
         self.assertEqual(expected_result, distance_matrix, 'Result was not what was expected.')
@@ -23,7 +30,7 @@ second_example = [[0, 37, 20, NO_PATH, NO_PATH, NO_PATH, NO_PATH, NO_PATH, NO_PA
                   [NO_PATH, 0, NO_PATH, NO_PATH, 13, NO_PATH, NO_PATH, NO_PATH, NO_PATH],
                   [NO_PATH, NO_PATH, 0, 14, NO_PATH, 9, NO_PATH, NO_PATH, NO_PATH],
                   [25, NO_PATH, NO_PATH, 0, NO_PATH, NO_PATH, 10, NO_PATH, NO_PATH],
-                  [NO_PATH, NO_PATH, NO_PATH, NO_PATH, 0,  8, NO_PATH, 19, NO_PATH],
+                  [NO_PATH, NO_PATH, NO_PATH, NO_PATH, 0, 8, NO_PATH, 19, NO_PATH],
                   [NO_PATH, 4, NO_PATH, 17, NO_PATH, 0, 12, NO_PATH, 23],
                   [NO_PATH, NO_PATH, NO_PATH, NO_PATH, NO_PATH, NO_PATH, 0, NO_PATH, 8],
                   [NO_PATH, 40, NO_PATH, NO_PATH, NO_PATH, NO_PATH, NO_PATH, 0, NO_PATH],
@@ -86,5 +93,3 @@ if __name__ == "__main__":
 
 # Timing function for measuring performance
 print(timeit.timeit(globals=globals()))
-
-
