@@ -6,14 +6,14 @@ them to the encapsulating function which adds it to a distance matrix which is o
 the script.
 
 I've used recursion here as part of the project brief for this assignment, the project files also include
-an imperative version of the script, which has been included for comparison. Both scripts include a TimeIt
+an iterative version of the script, which has been included for comparison. Both scripts include a TimeIt
 function to time the execution of each script and Unittest has been used to test individual functions and
 individual lines of code written. 
 
 # Requirements
 The script can be downloaded from the repo and opened in your IDE of choice, so long as you have Python 3.10
-installed on your machine. The scripts should import the relevent testing packages it needs before run time
-and so there is no need for an installation process.
+or later installed on your machine. The scripts should import the relevent testing packages it needs before run 
+time and so there is no need for an installation process.
 
 See requirements.txt also for packages needed for code to work.
 
