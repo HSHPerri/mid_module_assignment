@@ -26,13 +26,19 @@ class WarshallUnitTests(unittest.TestCase):
 
 NO_PATH = float('inf')
 
-# Example graph for input.
+# Example graph 1 for input.
 input_graph = [[0, 5, NO_PATH, 10],
                [NO_PATH, 0, 3, NO_PATH],
                [NO_PATH, NO_PATH, 0, 1],
                [NO_PATH, NO_PATH, NO_PATH, 0]]
 
-# Second example
+# Expected Result for input graph 1
+expected_result = [[0, 5, 8, 9],
+                   [NO_PATH, 0, 3, 4],
+                   [NO_PATH, NO_PATH, 0, 1],
+                   [NO_PATH, NO_PATH, NO_PATH, 0]]
+
+# Example Graph 2
 second_example = [[0, 37, 20, NO_PATH, NO_PATH, NO_PATH, NO_PATH, NO_PATH, NO_PATH],
                   [NO_PATH, 0, NO_PATH, NO_PATH, 13, NO_PATH, NO_PATH, NO_PATH, NO_PATH],
                   [NO_PATH, NO_PATH, 0, 14, NO_PATH, 9, NO_PATH, NO_PATH, NO_PATH],
@@ -42,12 +48,6 @@ second_example = [[0, 37, 20, NO_PATH, NO_PATH, NO_PATH, NO_PATH, NO_PATH, NO_PA
                   [NO_PATH, NO_PATH, NO_PATH, NO_PATH, NO_PATH, NO_PATH, 0, NO_PATH, 8],
                   [NO_PATH, 40, NO_PATH, NO_PATH, NO_PATH, NO_PATH, NO_PATH, 0, NO_PATH],
                   [NO_PATH, NO_PATH, NO_PATH, NO_PATH, NO_PATH, 23, NO_PATH, 10, 0]]
-
-# Expected Result
-expected_result = [[0, 5, 8, 9],
-                   [NO_PATH, 0, 3, 4],
-                   [NO_PATH, NO_PATH, 0, 1],
-                   [NO_PATH, NO_PATH, NO_PATH, 0]]
 
 
 def floyd_warshall(graph):
